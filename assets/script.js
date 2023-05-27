@@ -45,15 +45,16 @@ function startQuiz() {
   //     every sec time is going to decrement
 function beginTimer() {
     timer = setInterval(function(){
-      timerCount--
-      timerEl.textContent = timerCount
+      timerCount--;
+      timerEl.textContent = timerCount;
       if(timerCount <= 0){
-        clearInterval(timer)
+        clearInterval(timer);
         lostGame();
-      }
+      };
     },7500);
   }
-   function lostGame() {
+   
+  function lostGame() {
     localStorage.setItem("recentScore", quizScore)
    }
 
@@ -64,5 +65,43 @@ function beginTimer() {
     titleEl.textContent = currentQuestion.title 
 
     choicesEl.innerHTML = "";
-   };
 
+    for (let i = 0; i < 4; i++) { // this will set a loop for 4 times
+        let tempBtn = document.createElement("button");
+        tempBtn.textContent = currentQuestion.choices[i]; 
+        tempBtn.setAttribute('class', 'question-box');
+        tempBtn.setAttribute("id", currentQuestion.choices[i])
+      
+        tempBtn.onclick = validateAnswer//run the validateAnswer function
+        choicesEl.appendChild(tempBtn) //this will append to the Dom
+      }
+      if (currentQuestion === 0){
+        endQuiz();
+      };
+    };
+ // check if ans click by user matches with correct ans for question
+//        display correct msg
+//        check if we have time
+//          if question counter < length of question array
+//             increment the question counter 
+//                  go to next question
+    
+    function validateAnswer(){
+      if (this.id !== questions[questionIndex].correctAnswer){
+        alert("Wrong");
+        console.log('this is the id', this.id);
+        subtractQuizTimer();
+      }else {
+        alert("Correct!");
+        quizScore += "";
+        console.log('score so far', quizScore);
+      };
+      questionIndex++;
+      if (questionIndex >= questions.length){
+        endQuiz();
+      } else {
+        generateQuestions();
+      };
+    };
+    
+    
