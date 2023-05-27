@@ -56,3 +56,13 @@ function beginTimer() {
    function lostGame() {
     localStorage.setItem("recentScore", quizScore)
    }
+
+   //    show 1st question with options(function)
+   function generateQuestions() {
+    let currentQuestion = questions[questionIndex]
+    
+    titleEl.textContent = currentQuestion.title 
+
+    choicesEl.innerHTML = "";
+   };
+
