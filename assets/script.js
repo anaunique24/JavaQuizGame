@@ -40,3 +40,19 @@ function startQuiz() {
     generateQuestions();
     beginTimer(); 
 };
+
+//   start timer from 75 secs
+  //     every sec time is going to decrement
+function beginTimer() {
+    timer = setInterval(function(){
+      timerCount--
+      timerEl.textContent = timerCount
+      if(timerCount <= 0){
+        clearInterval(timer)
+        lostGame();
+      }
+    },7500);
+  }
+   function lostGame() {
+    localStorage.setItem("recentScore", quizScore)
+   }
