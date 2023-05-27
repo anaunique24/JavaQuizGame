@@ -97,3 +97,18 @@ h2 {
     margin-top: 90px;
 }
 
+#initials {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#initials-button {
+    margin-left: 2%;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgb(184, 142, 224);
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
