@@ -54,12 +54,12 @@ function beginTimer() {
     },7500);
   }
    
-  function lostGame() {
+function lostGame() {
     localStorage.setItem("recentScore", quizScore)
-   }
+};
 
    //    show 1st question with options(function)
-   function generateQuestions() {
+function generateQuestions() {
     let currentQuestion = questions[questionIndex]
     
     titleEl.textContent = currentQuestion.title 
@@ -77,8 +77,8 @@ function beginTimer() {
       }
       if (currentQuestion === 0){
         endQuiz();
-      };
     };
+};
  // check if ans click by user matches with correct ans for question
 //        display correct msg
 //        check if we have time
@@ -86,7 +86,7 @@ function beginTimer() {
 //             increment the question counter 
 //                  go to next question
     
-    function validateAnswer(){
+ function validateAnswer(){
       if (this.id !== questions[questionIndex].correctAnswer){
         alert("Wrong");
         console.log('this is the id', this.id);
@@ -101,7 +101,17 @@ function beginTimer() {
         endQuiz();
       } else {
         generateQuestions();
-      };
     };
+};
     
-    
+function endQuiz() {
+        startQuestionEl.setAttribute('class', 'hidden');
+        startEndEL.setAttribute('class', 'reveal');
+        localStorage.setItem("recentScore", quizScore);
+        clearInterval(timer)
+};
+      
+function subtractQuizTimer() {
+    timerCount -= 10;
+}
+
