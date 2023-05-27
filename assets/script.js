@@ -12,5 +12,31 @@ var questions = [{
     choices: ["jazz sounds", "juicy salad", "JavaScript", "jolly sunday"],
     correctAnswer: "JavaScript"
   }];
-  // create question counter = 0
-  let questionIndex = 0;
+// create question counter = 0
+let questionIndex = 0;
+
+
+// Click on start button(attach event listener)
+let startScreenEl = document.querySelector('#start-screen');
+let startQuestionEl = document.querySelector('#question-screen');
+let startEndEL = document.querySelector('#end-screen');
+let startBtn = document.querySelector('#start-button');
+let titleEl = document.querySelector('#title');
+let choicesEl = document.querySelector('#choices');
+let timerEl = document.querySelector('#timer');
+let timer;
+let timerCount;
+let quizScore = 0;
+
+startScreenEl.setAttribute('class', 'reveal');
+startQuestionEl.setAttribute('class', 'hidden');
+startEndEL.setAttribute('class', 'hidden');
+timerEl.setAttribute('class', 'countdown');
+
+function startQuiz() {
+    timerCount = 75;
+    startScreenEl.setAttribute('class', 'hidden');
+    startQuestionEl.setAttribute('class', 'reveal');
+    generateQuestions();
+    beginTimer(); 
+};
