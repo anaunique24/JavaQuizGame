@@ -4,43 +4,10 @@
 }
 
 
-/* .time {
-    text-align: right;
-    padding-top: 0;
-    font-weight: lighter;
-    font-size: 20px;
-}
-
-
-
-
-#start-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 45%;
-    width: 100px;
-    height: 40px;
-    font-size: 17px;
-    margin-block: 30px;
-    background-color: rgb(184, 142, 224);
-    color: aliceblue;
-    border: none;
-    border-radius: 10px;
-}
-
-#start-screen:hover {
-    background-color: blueviolet;
-} */ 
-
-
 h1 {
-    text-align: center;
-    padding-top: 150px;
+    padding-top: 60px;
     font-size: 50px;
 }
-
-
 
 .start-button {
     display: flex;
@@ -61,13 +28,11 @@ h1 {
     background-color: blueviolet;
 }
 
- p {
-    text-align: center;
+p {
     padding-left: 30%;
     padding-right: 30%;
     font-size: 20px;
- }
-
+}
 
 .hidden {
     display: none;
@@ -81,14 +46,13 @@ h1 {
     background-color: rgb(184, 142, 224);
     display: grid;
     grid-row: auto;
-    text-align: center;
     color: white;
     border: none;
     margin-left: 40%;
     margin-right: 40%;
     margin-bottom: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    box-shadow: 0px 0px 2px 2px;
     padding:15px;
     min-height:30px; 
     min-width: 120px;
@@ -108,16 +72,28 @@ h1 {
 }
 
 .countdown {
-    font-size: 20px;
-    border: 3px;
-    color: black;
-    text-align: right;
+    padding: 15px;
+    color: white;
+    background-color: rgb(184, 142, 224);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 85%;
 }
 
 .high-scores {
     border-radius: 5px;
-    padding: 20px;
-    margin-right: 85%;
+    padding: 1px;
     color: white;
     background-color: rgb(184, 142, 224);
 }
+
+#high-scores{
+    border: 3px;
+}
+
+h2 {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 90px;
+}
+
