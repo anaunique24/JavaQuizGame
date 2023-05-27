@@ -11,7 +11,13 @@ var questions = [{
     title: "What does JS stand for?",
     choices: ["jazz sounds", "juicy salad", "JavaScript", "jolly sunday"],
     correctAnswer: "JavaScript"
-  }];
+  }, { 
+    title: "What does Javascript do?",
+    choices: ["It's a coffee maker, duh.", "Sir, this is a Wendy's.", "Adds functionality to websites", "Your mother was working the bonbon concession at the Eiffel Tower."],
+    correctAnswer: "Adds functionality to websites"
+}];
+
+
 // create question counter = 0
 let questionIndex = 0;
 
@@ -34,7 +40,7 @@ startEndEL.setAttribute('class', 'hidden');
 timerEl.setAttribute('class', 'countdown');
 
 function startQuiz() {
-    timerCount = 75;
+    timerCount = 30;
     startScreenEl.setAttribute('class', 'hidden');
     startQuestionEl.setAttribute('class', 'reveal');
     generateQuestions();
@@ -51,7 +57,7 @@ function beginTimer() {
         clearInterval(timer);
         lostGame();
       };
-    },7500);
+    },1000);
   }
    
 function lostGame() {

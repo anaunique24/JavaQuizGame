@@ -1,32 +1,18 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
-/* .highscores {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
 
-.time {
+/* .time {
     text-align: right;
     padding-top: 0;
     font-weight: lighter;
     font-size: 20px;
 }
 
-p {
-    text-align: center;
-    padding-left: 30%;
-    padding-right: 30%;
-    font-size: 20px;
-}
 
-h1 {
-    text-align: center;
-    padding-top: 150px;
-    font-size: 50px;
-}
+
 
 #start-screen {
     display: flex;
@@ -45,4 +31,93 @@ h1 {
 
 #start-screen:hover {
     background-color: blueviolet;
-} */
+} */ 
+
+
+h1 {
+    text-align: center;
+    padding-top: 150px;
+    font-size: 50px;
+}
+
+
+
+.start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    margin-block: 30px;
+    background-color: rgb(184, 142, 224);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+}
+
+.start-button:hover {
+    background-color: blueviolet;
+}
+
+ p {
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-size: 20px;
+ }
+
+
+.hidden {
+    display: none;
+}
+
+.reveal {
+    display: block;
+}
+
+.question-box {
+    background-color: rgb(184, 142, 224);
+    display: grid;
+    grid-row: auto;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    font-size: 20px;
+    
+}
+
+.question-box:hover {
+    background-color:blueviolet;
+    transition: 0.3s;
+}
+
+.end-screen {
+    text-decoration: underline;
+    font-size: 200px;
+    color: black;
+}
+
+.countdown {
+    font-size: 20px;
+    border: 3px;
+    color: black;
+    text-align: right;
+}
+
+.high-scores {
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 85%;
+    color: white;
+    background-color: rgb(184, 142, 224);
+}
