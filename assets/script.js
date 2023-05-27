@@ -115,3 +115,37 @@ function subtractQuizTimer() {
     timerCount -= 10;
 }
 
+
+// else || if(timer === 0)
+//   stop timer and grab the last sec left
+//   display the score
+//   form is going to take user initial and score and save it in local storage and display it on second html page.
+var startButton = document.querySelector("#startButton");
+var endButton = document.querySelector('#end-screen');
+var initials = document.querySelector('#initials');
+var initialsButton = document.querySelector('#initials-button');
+var hiscores = document.querySelector('#high-scores');
+var userData = JSON.parse(localStorage.getItem("high-scores")) || [];
+
+initialsButton.addEventListener("click", function(){
+    // localStorage.setItem("Initials", initials);
+    // localStorage.setItem("recentScore", quizScore);
+    
+    var Player = {
+      initials:initials.value, 
+      score:quizScore,
+    };
+
+    console.log(Player);
+    userData.push(Player);
+
+    localStorage.setItem("high-scores", JSON.stringify(userData));
+    for (let i = 0; i < userData.length; i++) {
+      var p = document.createElement('p')
+      p.textContent = "Player: " + userData[i].initials + " Score: " + userData[i].score; 
+      hiscores.append(p)
+      
+    };
+  });
+  
+  startBtn.onclick = startQuiz;
