@@ -1,0 +1,48 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .highscores {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.time {
+    text-align: right;
+    padding-top: 0;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 150px;
+    font-size: 50px;
+}
+
+#start-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    margin-block: 30px;
+    background-color: rgb(184, 142, 224);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+}
+
+#start-screen:hover {
+    background-color: blueviolet;
+} */
