@@ -15,6 +15,7 @@
 MIT License found in repository.
 
 ## Screen Recording
-
+https://github.com/anaunique24/JavaQuizGame/assets/128003940/bd8a85d7-ca6a-47a1-aeb8-80ea96161294
 
 ## Deployed Link
+
